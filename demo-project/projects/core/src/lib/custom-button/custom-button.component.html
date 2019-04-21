@@ -1,0 +1,15 @@
+<ng-container [ngSwitch]="type">
+  <button *ngSwitchCase="buttonType.normal" mat-stroked-button color="primary" (click)="onClick()" [disabled]="!enabled">
+    <ng-container *ngTemplateOutlet="contentTpl"></ng-container>
+  </button>
+  <button *ngSwitchCase="buttonType.info" mat-stroked-button color="accent" (click)="onClick()" [disabled]="!enabled">
+    <ng-container *ngTemplateOutlet="contentTpl"></ng-container>
+  </button>
+  <button *ngSwitchCase="buttonType.warning" mat-stroked-button color="warn" (click)="onClick()" [disabled]="!enabled">
+    <ng-container *ngTemplateOutlet="contentTpl"></ng-container>
+  </button>
+  <button *ngSwitchCase="buttonType.icon" color="primary" (click)="onClick()" [disabled]="!enabled" mat-icon-button>
+    <mat-icon>{{icon}}</mat-icon>
+  </button>
+</ng-container>
+<ng-template #contentTpl><ng-content></ng-content></ng-template>

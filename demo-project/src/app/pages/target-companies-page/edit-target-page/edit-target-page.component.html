@@ -1,0 +1,3 @@
+<lib-custom-button [type]="backButton" [icon]="'arrow_back'" (clicked)="onGoBack()"></lib-custom-button>
+<lib-target *ngIf="this.targetCompany" [data]="targetCompany" (save)="onSave($event)">
+</lib-target>

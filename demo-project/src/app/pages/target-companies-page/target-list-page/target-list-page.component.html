@@ -1,0 +1,8 @@
+<div>
+  <lib-custom-button [type]="iconButton" [icon]="'add_circle'" (clicked)="onCreateClick()"></lib-custom-button>
+  <lib-custom-button [type]="iconButton" [icon]="'visibility'" [enabled]="editEnabled" (clicked)="onViewClick()"></lib-custom-button>
+  <lib-custom-button [type]="iconButton" [icon]="'edit'" [enabled]="editEnabled" (clicked)="onEditClick()"></lib-custom-button>
+  <lib-custom-button [type]="iconButton" [icon]="'delete'" [enabled]="deleteEnabled" (clicked)="onDeleteClick()"></lib-custom-button>
+</div>
+<lib-custom-grid [displaycolumndefs]="dataColumns" [data]="data" (selectedItems)="onSelect($event)">
+</lib-custom-grid>

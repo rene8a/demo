@@ -1,0 +1,38 @@
+<div id="company-contacts" class="container">
+  <table cellspacing="0">
+      <tr>
+        <td>
+          <mat-form-field>
+          <input matInput placeholder="Fullname contact 1" [(ngModel)]="data.targetCompanyContacts[0].fullName">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field>
+            <input matInput placeholder="Phone number" [(ngModel)]="data.targetCompanyContacts[0].phone">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field>
+            <input matInput placeholder="Email" [(ngModel)]="data.targetCompanyContacts[0].email">
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <mat-form-field>
+          <input matInput placeholder="Fullname contact 2" [(ngModel)]="data.targetCompanyContacts[1].fullName">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field>
+            <input matInput placeholder="Phone number" [(ngModel)]="data.targetCompanyContacts[1].phone">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field>
+            <input matInput placeholder="Email" [(ngModel)]="data.targetCompanyContacts[1].email">
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+</div>

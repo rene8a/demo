@@ -1,0 +1,45 @@
+<div id="company-info" class="container">
+  <mat-form-field>
+    <input matInput placeholder="Name" [(ngModel)]="data.name">
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput placeholder="Address" [(ngModel)]="data.address"></textarea>
+  </mat-form-field>
+
+  <table cellspacing="0">
+    <tr>
+      <td>
+        <mat-form-field>
+        <input matInput placeholder="City" [(ngModel)]="data.city">
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field>
+          <input matInput placeholder="State" [(ngModel)]="data.state">
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field>
+          <input matInput #postalCode maxlength="5" placeholder="Postal Code" [(ngModel)]="data.postalCode">
+          <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+    
+  <table cellspacing="0">
+    <tr>
+      <td>
+        <mat-form-field>
+          <span matPrefix>+1 &nbsp;</span>
+          <input type="tel" matInput placeholder="Telephone" [(ngModel)]="data.phone">
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field>
+          <input type="url" matInput placeholder="Web site" [(ngModel)]="data.website">
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+</div>

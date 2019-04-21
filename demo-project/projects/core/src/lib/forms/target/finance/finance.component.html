@@ -1,0 +1,39 @@
+<div id="company-financial" class="container">
+  <table cellspacing="0">
+    <tr>
+      <td>
+        <mat-form-field>
+          <span matPrefix>$ &nbsp;</span>
+          <input matInput placeholder="2015 Income" [(ngModel)]="data.targetCompanyFinancialPeriods[0].amount">
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field>
+          <span matPrefix>$ &nbsp;</span>
+          <input matInput placeholder="2016 Income" [(ngModel)]="data.targetCompanyFinancialPeriods[1].amount">
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field>
+          <span matPrefix>$ &nbsp;</span>
+          <input matInput placeholder="2017 Income" [(ngModel)]="data.targetCompanyFinancialPeriods[2].amount">
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field>
+          <span matPrefix>$ &nbsp;</span>
+          <input matInput placeholder="2018 Income" [(ngModel)]="data.targetCompanyFinancialPeriods[3].amount">
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field>
+          <span matPrefix>$ &nbsp;</span>
+          <input matInput placeholder="2019 Income" [(ngModel)]="data.targetCompanyFinancialPeriods[4].amount">
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+  <mat-form-field>
+    <textarea class="summary" matInput placeholder="Summary" [(ngModel)]="data.financeSummary"></textarea>
+  </mat-form-field>
+</div>

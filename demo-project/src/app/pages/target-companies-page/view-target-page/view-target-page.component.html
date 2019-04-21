@@ -1,0 +1,83 @@
+<lib-custom-button [type]="backButton" [icon]="'arrow_back'" (clicked)="onGoBack()"></lib-custom-button>
+<div *ngIf="targetCompany">
+  <mat-grid-list cols="12" rowHeight="50px">
+    <mat-grid-tile [colspan]="12" [rowspan]="1" >
+      <div class="content"><h3>{{ targetCompany.name }}</h3></div>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <mat-grid-list cols="12" rowHeight="30px">
+    <mat-grid-tile [colspan]="1" [rowspan]="1" >
+      <div class="content">Address:</div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="11" [rowspan]="1" >
+      <div class="content">{{ targetCompany.address }}</div>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="1" [rowspan]="1" >
+      <div class="content">City:</div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="11" [rowspan]="1" >
+      <div class="content">{{ targetCompany.city }}</div>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="1" [rowspan]="1" >
+      <div class="content">State:</div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="11" [rowspan]="1" >
+      <div class="content">{{ targetCompany.state }}</div>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="1" [rowspan]="1" >
+      <div class="content">Postal Code:</div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="11" [rowspan]="1" >
+      <div class="content">{{ targetCompany.postalCode }}</div>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="1" [rowspan]="1" >
+      <div class="content">Website:</div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="11" [rowspan]="1" >
+      <div class="content"><a href="#">{{ targetCompany.website }}</a></div>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="1" [rowspan]="1" >
+      <div class="content">Status:</div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="1" >
+      <div class="content">{{ targetCompany.status }} ></div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="9" [rowspan]="1" >
+      <div class="content">{{ targetCompany.statusSummary }}</div>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="1" [rowspan]="1" >
+      <div class="content">Cont. 1:</div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="3" [rowspan]="1" >
+      <div class="content">{{ targetCompany.targetCompanyContacts[0].fullName }}</div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="3" [rowspan]="1" >
+      <div class="content">{{ targetCompany.targetCompanyContacts[0].phone }}</div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="5" [rowspan]="1" >
+      <div class="content">{{ targetCompany.targetCompanyContacts[0].email }}</div>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="1" [rowspan]="1" >
+      <div class="content">Cont. 2:</div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="3" [rowspan]="1" >
+      <div class="content">{{ targetCompany.targetCompanyContacts[1].fullName }}</div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="3" [rowspan]="1" >
+      <div class="content">{{ targetCompany.targetCompanyContacts[1].phone }}</div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="5" [rowspan]="1" >
+      <div class="content">{{ targetCompany.targetCompanyContacts[1].email }}</div>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <lib-bar-chart *ngIf="barChartData" [height]="300" [data]="barChartData" [xLabel]="'Year'" [yLabel]="'Amount'"></lib-bar-chart>
+  <div class="content">{{ targetCompany.financeSummary }}</div>
+</div>

@@ -1,0 +1,21 @@
+<div id="company-status" class="container">
+  <mat-form-field>
+    <mat-select placeholder="Company status" [(ngModel)]="data.status">
+      <mat-option value="Researching">
+        Researching
+      </mat-option>
+      <mat-option value="Pending Approval">
+        Pending Approval
+      </mat-option>
+      <mat-option value="Approved">
+        Approved
+      </mat-option>
+      <mat-option value="Declined">
+        Declined
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput placeholder="Summary" [(ngModel)]="data.statusSummary"></textarea>
+  </mat-form-field>
+</div>

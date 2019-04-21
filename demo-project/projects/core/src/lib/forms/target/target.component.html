@@ -1,0 +1,38 @@
+<mat-horizontal-stepper [linear]="isLinear" #stepper>
+  <!-- Custom icon -->
+  <ng-template matStepperIcon="done">
+    <mat-icon>edit</mat-icon>
+  </ng-template>
+  <ng-template matStepperIcon="number">
+    <mat-icon>edit</mat-icon>
+  </ng-template>
+
+  <mat-step [completed]="true" [stepControl]="firstFormGroup">
+    <ng-template matStepLabel>Company Info</ng-template>
+    <div class="container">
+      <lib-info #targetInfo [data]="targetCompany"></lib-info>
+    </div>
+  </mat-step>
+  <mat-step [completed]="true">
+    <ng-template matStepLabel>Status</ng-template>
+    <div class="container">
+      <lib-status #targetStatus [data]="targetCompany"></lib-status>
+    </div>
+  </mat-step>
+  <mat-step [completed]="true">
+    <ng-template matStepLabel>Key contacts</ng-template>
+    <div class="container">
+      <lib-contacts #targetContacts [data]="targetCompany"></lib-contacts>
+    </div>
+  </mat-step>
+  <mat-step [completed]="true">
+    <ng-template matStepLabel>Financial performance</ng-template>
+    <div class="container">
+      <lib-finance #targetFinance [data]="targetCompany"></lib-finance>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>
+
+<div>
+  <lib-custom-button [type]="saveButton" (clicked)="onSave()">Save</lib-custom-button>
+</div>
