@@ -14,6 +14,7 @@ export class CustomGridComponent implements OnInit {
   displayedColumns: Array<string>;
   selection = new SelectionModel<any>(true, []);
 
+  @Input() loading: boolean;
   @Input() displaycolumndefs: ColumnDefinition[];
   @Input('data') set data(value: TargetCompany[]) {
     this.mattabledataSource.data = value;
