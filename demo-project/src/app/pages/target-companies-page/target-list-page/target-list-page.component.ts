@@ -25,6 +25,7 @@ export class TargetListPageComponent implements OnInit {
   iconButton = ButtonType.icon;
   selectedItems = [];
   selectedIds = [];
+  loading = false;
 
   constructor(private router: Router, private targetCompanyService: TargetCompanyService) { }
 
@@ -33,7 +34,9 @@ export class TargetListPageComponent implements OnInit {
   }
 
   loadData() {
+    this.loading = true;
     this.targetCompanyService.getAllTargetCompanies().subscribe(x => {
+      this.loading = false;
       this.data = [...x];
     });
   }
