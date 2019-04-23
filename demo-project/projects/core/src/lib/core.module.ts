@@ -22,7 +22,8 @@ import {
   MatFormFieldModule,
   MatInputModule,
   MatSelectModule,
-  MatStepperModule
+  MatStepperModule,
+  MatProgressSpinnerModule
 } from '@angular/material';
 
 @NgModule({
@@ -38,6 +39,7 @@ import {
     MatInputModule,
     MatSelectModule,
     MatStepperModule,
+    MatProgressSpinnerModule,
     BrowserAnimationsModule,
     FormsModule
   ],
